@@ -1,5 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
+<style>
+html {
+    scroll-behaviour: smooth;
+}
+</style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +12,50 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<header>
-</header>
-<main>
-</main>
-<footer>
-</footer>
+<body>
+    <section class="section section1">
+        <header>
+        <h1>Welcome into my Portfolio</h1>
+        </header>
+        <div class="container">
+            <div style="text-align: left;">
+            Salut, je suis Aziz_beaudelaire, étudiant à Ynov Toulouse.
+            </div>
+            <div style="text-align: left;">
+            Bienvenue sur mon portfolio, où je partage mes différents projets<br>
+            réalisés dans de nombreux langages : HTML/CSS, JavaScript, C, C++, C#, Go et Java</p>
+            </div>
+        </div>
+        </div>
+        <div class="container_rec">
+            <div class="namelogo align-left">Aziz_beaudelaire</div>
+            <a href="#project" class="favorite styled" >My Project</a>
+            <a href="#about" class="favorite styled">About</a>
+            <a href="#contact" class="favorite styled"  >Contact</a>
+        </div>
+    </section>
+    <section class="section section2">
+        <main>
+        <h3>Scroll to navigate</h3>
+        </main>
+    </section>
+    <section class="section section3">
+        <footer>
+        <h2 id="project">check this out</h2>
+        <h2 id="about">job</h2>
+        <h2 id="contact">contact</h2>                        
+        </footer>
+    </section>
+</body>
 </html>
+<script>
+    window.addEventListener('scroll', function() {
+        // Obtenez la position de défilement verticale de la page
+        const scrollTop = window.scrollY;
+
+        // Réglez la position d'arrière-plan en fonction de la position de défilement
+        document.querySelector('.section1').style.backgroundPositionY = -scrollTop * 0.5 + 'px';
+        document.querySelector('.section2').style.backgroundPositionY = -scrollTop * 0.7 + 'px';
+        document.querySelector('.section3').style.backgroundPositionY = -scrollTop * 0.9 + 'px';
+    });
+</script>

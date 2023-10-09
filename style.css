@@ -1,28 +1,218 @@
-header {
-	background-color: whitesmoke;
-	display: flex;
-	align-items: center;
-    border-radius: 90px;
-	height: 80px;
-	padding: 0 20px;
-	box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+@font-face {
+    font-family: 'MaPolice'; /* Le nom que vous donnerez à la police */
+    src: url('Courgette/Courgette-Regular.ttf') format('truetype'); /* Chemin vers votre fichier de police */
+    /* Autres formats de police peuvent être spécifiés ici (woff, woff2, etc.) */
 }
 
-main {
-    margin: auto;
+.flexCenter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
+.flexAround {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexbetween {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexLeft {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Aligner les éléments à gauche */
+    align-items: center;
+}
+
+.bg {
+    margin: auto;
+    background-image: url('bgp.jpg');
+    background-size: cover; /* Ajuste la taille de l'image de fond */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image de fond */
 }
 
 body {
-    
+    margin: auto;
+    background-image: url('bgp.jpg');
+    background-size: cover; /* Ajuste la taille de l'image de fond */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image de fond */
+}
+
+/* Définissez la taille de la section */
+.section {
+    height: 100vh; /* 100% de la hauteur de la fenêtre */
+    background-size: cover; /* Ajuste la taille de l'image à la section */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+/* Chaque section a une image différente */
+.section1 {
+    background-image: url('bg_space.gif');
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+.section2 {
+    background-image: url('bgp.jpg');
+}
+
+.section3 {
+    background-image: url('bgp.jpg');
+}
+
+header {
+	background-color: whitesmoke;
+    display: contents;
+	height: 80px;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    /*justify-content: right;*/ /* Déplace les éléments vers la droite */
+    background-color: brown;
+    height: 60px;
+}
+
+main {
+    justify-content: space-around;
+    background-color: transparent;
+    height: 3520px;
 }
 
 footer {
-    background-color: blue;
-    border-radius: 90px;
-    height: 80px;
+    display: flex;
+    background-color: skyblue;
+    height: 137px;
+}
+
+p {
+    text-align: center;
 }
 
 h1 {
-    font-size: 8px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: whitesmoke
+}
+
+h2 {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 10px;
+    width: 20%;
+    text-align: left;
+    margin: 0; /* Supprime les marges précédentes */
+    position: absolute; /* Positionnement absolu */
+    bottom: 5px; /* Aligner légèrement au-dessus du bas */
+    left: 0; /* Aligner à gauche */
+    transform: translate(10%, 0); /* Déplacer horizontalement de 10% et pas de décalage vertical */
+    transition: transform 0.3s ease-in-out;
+}
+
+.namelogo {
+    font-size: 16px;
+    font-family: fantasy;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Aligner le texte à gauche */
+    align-items: center; /* Aligner le texte verticalement au centre */
+    flex-grow: 1; /* Permet au nom de logo de prendre autant d'espace que possible à gauche */
+    margin-left: 10px;
+}
+
+.styled {
+    color: black;
+    display: flex;
+    min-width: 6rem;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms;
+    height: 2.2em;
+    border-radius: 12px;
+    border: none;
+    margin-right: 2%;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    background-color: #fff;
+    
+}
+
+a {
+    /* Styles pour les liens */
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px; /* Ajoute un espace entre les liens */
+}
+
+nav > *:last-child {
+    margin-right: 0; /* Supprime la marge à droite du dernier élément */
+}
+
+.styled:hover {
+    transform: translateY(-2px);
+    transition-duration: 200ms;
+    background-color: rgb(233, 233, 233);
+}
+
+.styled:active {
+    box-shadow:
+        inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+        inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.align-left {
+    justify-content: flex-start; /* Aligner le texte à gauche */
+}
+
+.section1 .container {
+    position: fixed;
+    top: 310px; /* Ajustez la valeur selon vos besoins */
+    left: 27px; /* Ajustez la valeur selon vos besoins */
+    width: 230px;
+    height: 290px;
+    background-color: #ccc;
+}
+
+.section1 .container p {
+    color: #333; /* Couleur du texte */
+    font-family: 'MaPolice', sans-serif; /* Utilisation de la police personnalisée avec une police de secours */
+    font-size: 20px; /* Taille du texte */
+    margin: 10px 0; /* Marge autour du texte (haut et bas) */
+    padding: 5px; /* Rembourrage à l'intérieur de l'élément */
+}
+
+.section1 .container_rec {
+    position: absolute;
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    /*justify-content: right;*/ /* Déplace les éléments vers la droite */
+    top: 170px; /* Ajustez la valeur selon vos besoins */
+    left: 210px; /* Ajustez la valeur selon vos besoins */
+    width: 900px;
+    height: 50px;
+    background-color: #ccc;
 }
